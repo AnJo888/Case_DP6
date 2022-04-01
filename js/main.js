@@ -61,6 +61,7 @@
     e.preventDefault();
     setTimeout(function () {
       console.log('enviado');
+      ga('send', 'event', 'contato', 'enviado', 'enviado');
       lb.find('.lightbox-icon')
         .attr('src', 'img/logo-dp6-square.png')
         .attr('alt', 'Logo DP6');

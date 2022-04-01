@@ -14,20 +14,12 @@ let m2 = document.getElementById('m2');
 let b1 = document.getElementById('b1');
 let b2 = document.getElementById('b2');
 let b3 = document.getElementById('b3');
-let f1 = document.getElementById('nome');
-let f2 = document.getElementById('email');
-let f3 = document.getElementById('telefone');
-let f4 = document.getElementById('aceito');
 
 m1.onclick = menuClicked;
 m2.onclick = menuClicked;
 b1.onclick = buttonClicked;
 b2.onclick = buttonClicked;
 b3.onclick = buttonClicked;
-f1.oninput = fieldChanged;
-f2.oninput = fieldChanged;
-f3.oninput = fieldChanged;
-f4.oninput = fieldChanged;
 
 function menuClicked(e) {
     if (this.id === "m1") {
@@ -47,9 +39,4 @@ function buttonClicked(e) {
         rotulo = "Dolor";
     }
     ga('send', 'event', 'analise', 'ver_mais', rotulo);
-}
-
-function fieldChanged(e) {
-    alert('Entrou');
-    ga('send', 'event', 'contato', this.id, 'preencheu');
 }
